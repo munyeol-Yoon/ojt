@@ -1,3 +1,14 @@
-* {
-  color: red;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+.container {
+  display: flex;
+  align-items: row;
+  flex-direction: column;
+  gap: 20px;
 }
