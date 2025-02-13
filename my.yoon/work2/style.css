@@ -15,10 +15,33 @@ header {
   align-items: center;
 }
 
+button {
+  width: 80px;
+  height: 50px;
+  color: #808080;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d9d9d9;
+  color: white;
+  border: none;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
 table {
   border-collapse: separate;
   border-spacing: 0;
   width: 650px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
 }
 
 thead {
