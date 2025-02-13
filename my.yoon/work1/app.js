@@ -1,20 +1,21 @@
 
 let todo = JSON.parse(localStorage.getItem('todo')) || [];
-const _todoList = document.querySelector('#todo-list');
+const todoList = document.querySelector('#todo-list');
 
 function handleGetTodo() {
 
-  _todoList.innerHTML = '';
+  todoList.innerHTML = '';
 
   todo.map((item, index) => {
     const li = document.createElement('li');
+    li.className = 'todo-item';
     li.innerHTML = `
       <div>${item}</div>
       <div>
         <button class="delete-button" data-index='${index}'>Delete</button>
       </div>
     `;
-    _todoList.appendChild(li);
+    todoList.appendChild(li);
   });
 
   const deleteButtons = document.querySelectorAll('.delete-button');
@@ -26,8 +27,6 @@ function handleGetTodo() {
 
 function handleClickDeleteTodo(event) {
   const index = event.target.getAttribute('data-index');
-
-  console.log(index)
 
   todo.splice(index, 1);
 
